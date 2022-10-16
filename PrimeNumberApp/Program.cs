@@ -13,16 +13,34 @@ int num2 = 2;
 
      while(primeNumber != count)
     {
-        if(num % num2 == 0)
+        if (num == 2 || num == 3)
+    {
+        list.Add(num);
+        num++;
+        count++;
+        continue;
+
+    }
+
+        if (num % num2 == 0)
         {
-            list.Add(num);
-            num++;
+         if(num == num2)
+        {
             count++;
+            list.Add(num);
+
+        }
+            num++;
+            num2 = 2;
+            
+            
+
         }
         else
         {
             num2++;
-        }
+            
+    }
         
     }
 
@@ -33,7 +51,6 @@ for (var i = 0; i < list.Count; i++)
 }
 
 
-////格納した配列を拡張for文で表示
-//Console.WriteLine("" + );
+
 
 
